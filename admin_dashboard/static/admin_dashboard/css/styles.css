@@ -1,0 +1,428 @@
+p, h1, h2, h3, .pagination {
+    font-family: Unbounded;
+}
+#employeepagi {
+    position: relative;
+    top: 120px;
+    left: 20vw;
+}
+.header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    border-radius: 20px;
+    background: #d32f2f;
+}
+#logo-img {
+    position: absolute;
+    width: 17vw;
+    top: 10px;
+    left: 5vw;
+}
+#desk {
+    position: absolute;
+    width: 25vw;
+    top: 25px;
+    left: 70vw;
+}
+.main-list h1 {
+    position: absolute;
+    top: 150px;
+    left: 12vw;
+    font-family: Unbounded;
+    font-weight: 400;
+    font-size: 2vw;
+}
+.add-worker {
+    position: absolute;
+    width: 12vw;
+    height: 30px;
+    top: 170px;
+    left: 77vw;
+    font-family: Unbounded;
+    border: none;
+    font-weight: 400;
+    font-size: 1vw;
+    background: #fdd835;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#tracklink {
+    text-decoration: none;
+    color: inherit;
+}
+#adminact {
+    text-decoration: none;
+    color: inherit;
+    transition: color 1s;
+}
+#adminact:hover {
+    color: #ea0f0f;
+}
+
+.list {
+position: relative;
+    top: 100px;
+    left: 10vw;
+    width: 80vw;
+    height: 600px;
+    background: none;
+    border: 1px solid #808080;
+    border-radius: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+}
+
+thead th {
+    font-family: Unbounded;
+    text-align: left;
+    padding: 25px;
+    margin-right: 35px;
+    border-bottom: 2px solid #ddd;
+    font-weight: 400;
+
+}
+
+tbody td {
+    font-family: Unbounded;
+    font-weight: 300;
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+
+td a {
+    text-decoration: none;
+    color: #000000;
+    margin-right: 10px;
+}
+
+
+
+/* Optional: Center align text in cells */
+thead th, tbody td {
+    text-align: center;
+}
+#trackhourlyhamza {
+    width: 15vw;
+    left: 52.5vw;
+}
+.num {
+    position: absolute;
+    top: 815px;
+    left: 70vw;
+    font-family: Unbounded;
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+
+#empicon {
+    padding: 0px;
+    margin-top: -25px;
+    position: absolute;
+    left: 2vw;
+}
+.assigned-tasks {
+    font-family: Unbounded;
+    font-weight: 300;
+    color: #d32f2f;
+
+}
+
+.manageemployee {
+    font-family: Unbounded;
+}
+.trackh {
+    position: absolute;
+    left: 20vw;
+
+}
+.form-login {
+    position: relative;
+    left: 33vw;
+    top: 40px;
+    width: 32vw;
+    height: 419px;
+    border-radius: 65px;
+    background: #ffcdd2;
+    background-blend-mode: normal;
+}
+.login {
+    position: absolute;
+    width: 127px;
+    height: 52px;
+    left: 12vw;
+    top: 300px;
+    border-radius: 29px;
+    background: #59adff;
+    background-blend-mode: normal;
+    border: none;
+    font-family: Unbounded;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.welcomep {
+    position: absolute;
+    font-weight: 300;
+    left: 45vw;
+    top: 145px;
+    z-index: 10;
+}
+.usernamef {
+    position: absolute;
+    top: 80px;
+    left: 5vw;
+    border-bottom: none;
+    border: none;
+
+
+}
+.passwordf {
+    position: absolute;
+    top: 150px;
+    left: 5vw;
+    border-bottom: none;
+    border: none;
+}
+.resetp {
+    display: none;
+}
+.logoutb {
+    position: absolute;
+    width: 7vw;
+    height: 30px;
+    top: 50px;
+    font-family: Unbounded;
+    font-weight: bold;
+    font-size: 1vw;
+    top: 130px;
+    left: 80vw;
+    border-radius: 20px;
+    background-color: #fdd835;
+    color: #000000;
+    cursor: pointer;
+    border: none;
+}
+.trackhours {
+    position: absolute;
+    top: 130px;
+    left: 69vw;
+    width: 10vw;
+    height: 30px;
+    font-family: Unbounded;
+    font-weight: 300;
+    color: black;
+    background-color: #fdd835;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+}
+#goback {
+    left: 5vw;
+    width: 8.5vw;
+    top: 470px;
+    font-size: 1vw;
+}
+.updatestatus {
+
+        position: RELATIVE;
+        width: 11vw;
+        height: 30px;
+        font-family: Unbounded;
+        font-weight: 300;
+        font-size: 1vw;
+        top: 0px;
+        left: 2vw;
+        border-radius: 20px;
+        background-color: #d32f2f;
+        color: #FFFFFF;
+        cursor: pointer;
+        border: none;
+}
+.manageemployeeh {
+    position: absolute;
+    color: #d32f2f;
+    left: 60vw;
+    top: 120px;
+}
+.addhours {
+
+        position: relative;
+        color: #d32f2f;
+        left: 40vw;
+        top: 20px;
+
+}
+.formstyle {
+    font-family: Unbounded;
+    position: relative;
+    top: 70px;
+    left: 42vw;
+}
+.btn-primary {
+position: relative;
+    left: 3vw;
+    width: 8vw;
+    height: 30px;
+    font-family: Unbounded;
+    font-weight: 300;
+    color: black;
+    background-color: #fdd835;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 30px;
+    border-radius: 20px;
+}
+.form-group {
+    margin-bottom: 45px; /* Adjust the value as needed */
+    margin-right: 10px;
+}
+#save-changes {
+    position: relative;
+    width: 11vw;
+    left: 0vw;
+}
+
+#editrec {
+    width: 16vw;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid #d32f2f;
+
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.form-container {
+    width: 30vw;
+    background: none;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: Unbounded;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    position: relative;
+    left: 35vw;
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #000000;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #000000;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+
+}
+
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #f10d2f;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #ffffff;
+    font-weight: 600;
+    width: 40%;
+    background: #59adff;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #d32f2f;
+    border-color: #fff;
+}
+
+
+#goback-2 {
+    width: 7vw;
+    top: 160px;
+    font-size: 1.5vw;
+    text-align: center;
+}
+#submitfilter {
+    position: relative;
+    left: 31vw;
+    top: -40px;
+}
+
+#goback-6 {
+
+    left: 80vw;
+}
+

@@ -1,0 +1,49 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block content %}
+<a href="{% url 'dashboard_admin' %}" class="btn btn-secondary mt-3 trackhours" id="goback-2">Back</a>
+
+<h2>Add Worker</h2>
+<div class="form-container">
+  <form class="form" method="post">
+    {% csrf_token %}
+
+    <!-- First Name Field -->
+    <div class="form-group">
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" name="first_name" required>
+    </div>
+
+    <!-- Last Name Field -->
+    <div class="form-group">
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name" required>
+    </div>
+
+    <!-- Role Field -->
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select id="role" name="role" required>
+        {% for role in roles %}
+        <option value="{{ role.id }}">{{ role.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- Username Field -->
+    <div class="form-group">
+      <label for="username">Username (optional)</label>
+      <input type="text" id="username" name="username">
+    </div>
+
+    <!-- Password Field -->
+    <div class="form-group">
+      <label for="password">Password (optional)</label>
+      <input type="password" id="password" name="password">
+    </div>
+
+    <!-- Submit Button -->
+    <button class="form-submit-btn" type="submit">Add Worker</button>
+  </form>
+</div>
+{% endblock %}

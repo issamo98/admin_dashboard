@@ -1,0 +1,63 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<h2 class="assigned-tasks">Your Assigned Tasks</h2>
+
+<form method="post" action="{% url 'trackhamza' %}">
+  {% csrf_token %}
+  <button class="trackhamza btn btn-secondary mt-3 trackhours" id="trackhourlyhamza" type="submit">Track Employees Hours</button>
+</form>
+
+<form method="post" action="{% url 'logout' %}">
+  {% csrf_token %}
+  <button class="logoutb" type="submit">Logout</button>
+</form>
+<div class="trackhours"><a id="tracklink" href="{% url 'employee_hours' %}">Track Hours</a></div>
+
+
+{% if tasks %}
+<table>
+  <thead>
+  <tr>
+    <th>Task Title</th>
+    <th>Description</th>
+    <th>Deadline</th>
+    <th>Date of Assignment</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for task in tasks %}
+  <tr>
+    <td>{{ task.title }}</td>
+    <td>{{ task.description }}</td>
+    <td>{{ task.deadline }}</td>
+    <td>{{ task.date_of_assignment }}</td>
+    <td>{{ task.get_status_display }}</td>
+    <td>
+      <!-- Update status form -->
+      <form method="post" action="">
+        {% csrf_token %}
+        <input type="hidden" name="task_id" value="{{ task.id }}">
+        <select name="status" required>
+          <option value="in progress" {% if task.status == 'in progress' %}selected{% endif %}>In Progress</option>
+          <option value="postponed" {% if task.status == 'postponed' %}selected{% endif %}>Postponed</option>
+          <option value="done" {% if task.status == 'done' %}selected{% endif %}>Done</option>
+          <option value="pending" {% if task.status == 'pending' %}selected{% endif %}>Pending</option>
+        </select>
+        <button class="updatestatus" type="submit" name="update_status">Update Status</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>You don't have any tasks assigned yet.</p>
+{% endif %}
+
+{% endblock %}

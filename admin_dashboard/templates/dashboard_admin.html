@@ -1,0 +1,65 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button class="logoutb" type="submit">Logout</button>
+</form>
+
+<main>
+    <div class="main-list">
+        <h1>EMPLOYEES MANAGEMENT</h1>
+        <a href="{% url 'add_employee' %}"><button class="add-worker">ADD EMPLOYEE</button></a>
+        <div class="list">
+            <table>
+                <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>ROLE</th>
+                    <th>ACTIONS</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>
+                        {{ employee.last_name }} {{ employee.first_name }}</td>
+                    <td>{{ employee.role.name }}</td>
+                    <td>
+                        <a id="adminact" href="{% url 'manage_employee' employee.id %}">Manage Employee</a> |
+                        <a id="adminact" href="{% url 'add_task' %}">Add Task</a> |
+                        <a id="adminact" href="{% url 'manage_employee_hours' employee.id %}">manage hours</a>
+
+
+                    </td>
+                    <td><img src="{% static 'admin_dashboard/images/EMP ICON.png' %}" alt="icon" id="empicon">
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="pagination" id="employeepagi">
+    <span class="step-links">
+        {% if employees.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ employees.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ employees.number }} of {{ employees.paginator.num_pages }}.
+        </span>
+
+        {% if employees.has_next %}
+            <a href="?page={{ employees.next_page_number }}">next</a>
+            <a href="?page={{ employees.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+    </div>
+
+    <h2 class="num">{{ employees|length }} Employees total</h2>
+</main>
+{% endblock %}

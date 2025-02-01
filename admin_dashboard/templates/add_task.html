@@ -1,0 +1,42 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block content %}
+<h2>Add Task</h2>
+<a href="{% url 'dashboard_admin' %}" class="btn btn-secondary mt-3 trackhours" id="goback-2">Back</a>
+
+<div class="form-container">
+  <form class="form" method="post">
+    {% csrf_token %}
+    <!-- Title Field -->
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+
+    <!-- Description Field -->
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description" id="description" rows="5" required></textarea>
+    </div>
+
+    <!-- Deadline Field -->
+    <div class="form-group">
+      <label for="deadline">Deadline</label>
+      <input type="date" id="deadline" name="deadline">
+    </div>
+
+    <!-- Assign To Field -->
+    <div class="form-group">
+      <label for="assign_to">Assign To</label>
+      <select id="assign_to" name="assign_to" required>
+        {% for employee in employees %}
+        <option value="{{ employee.id }}">{{ employee.first_name }} {{ employee.last_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="form-submit-btn" type="submit">Assign Task</button>
+  </form>
+</div>
+{% endblock %}

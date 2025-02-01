@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Delete Work Hour</h1>
+<p><strong>Employee:</strong> {{ hour.employee.first_name }} {{ hour.employee.last_name }}</p>
+
+<p>Are you sure you want to delete the work hour entry for {{ hour.date }}?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+</form>
+
+<a href="{% url 'manage_employee_hours' hour.employee.id %}" class="btn btn-secondary mt-3">Cancel</a>
+{% endblock %}

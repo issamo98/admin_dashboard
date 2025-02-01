@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block title %}
+  <title>Desk Management</title>
+  {% endblock %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'admin_dashboard/css/styles.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="header">
+    <div class="rectangle">
+    <img src="{% static 'admin_dashboard/images/logo.png' %}" alt="logo" id="logo-img">
+    <img src="{% static 'admin_dashboard/images/desk.png' %}" alt="desk" id="desk">
+    </div>
+  </div>
+</header>
+{% block sidebar %}
+<!-- insert default navigation text for every page -->
+{% endblock %}
+{% block content %}
+<!-- default content text (typically empty) -->
+{% endblock %}
+</body>
+</html>
