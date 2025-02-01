@@ -23,7 +23,7 @@ SECRET_KEY = 'django-insecure-07$@qkj9o4wv!*y8*ur9!mni0tl!^$n@+r1@=csvvbju_ecknj
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['admin_dashboard.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['admin_dashboard.onrender.co', 'localhost']
 SECRET_KEY = os.environ.get('SECRET_KEY', 'HE321lpme')
 
 
