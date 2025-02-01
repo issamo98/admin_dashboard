@@ -24,6 +24,8 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = ['admin_dashboard.herokuapp.com', 'localhost']
+SECRET_KEY = os.environ.get('SECRET_KEY', 'HE321lpme')
+
 
 
 # Application definition
